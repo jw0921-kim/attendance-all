@@ -25,6 +25,13 @@ button:hover {
 .container {
     margin-top: 20px;
     display: none; /* 기본적으로 숨겨놓기 */
+    flex-direction: row; /* 좌우 배치 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 50px; /* 형제와 자매들 사이의 간격 */
+}
+
+.section {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -35,4 +42,12 @@ button.show {
 
 button:focus {
     outline: none;
+}
+
+button {
+    margin: 5px;
+}
+
+h3 {
+    margin-bottom: 10px;
 }

@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById(containerId);
       container.innerHTML = '';  // 기존 내용을 비운 후에 새롭게 추가
 
+      // 형제 섹션
       const brothersSection = document.createElement('div');
+      brothersSection.classList.add('section');
       brothersSection.innerHTML = '<h3>형제</h3>';
       brothers.forEach(name => {
           const button = document.createElement('button');
@@ -41,7 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       });
 
+      // 자매 섹션
       const sistersSection = document.createElement('div');
+      sistersSection.classList.add('section');
       sistersSection.innerHTML = '<h3>자매</h3>';
       sisters.forEach(name => {
           const button = document.createElement('button');
@@ -52,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       });
 
+      // 형제와 자매 섹션을 컨테이너에 추가
       container.appendChild(brothersSection);
       container.appendChild(sistersSection);
   }
