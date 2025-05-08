@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출석부</title>
+    <link rel="stylesheet" href="styles.css"> <!-- styles.css 연결 -->
+</head>
+<body>
+    <div class="container">
+        <h1>출석부</h1>
+        
+        <!-- 각 부서 버튼 -->
+        <div class="buttons">
+            <button id="gyeomsonBtn" class="btn">겸손부</button>
+            <button id="onyuBtn" class="btn">온유부</button>
+            <button id="salangBtn" class="btn">사랑부</button>
+        </div>
+
+        <!-- 각 부서 이름들이 버튼으로 생성될 컨테이너 -->
+        <div id="attendanceContainerGyeomson" class="attendance-list"></div>
+        <div id="attendanceContainerOnyu" class="attendance-list"></div>
+        <div id="attendanceContainerSalang" class="attendance-list"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- JavaScript 연결 -->
+</body>
+</html>
