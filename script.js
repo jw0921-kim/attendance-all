@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const gyeomsonBrothers = ['이태섭','김진우','이동환','문지훈','박지웅','김인수','최재혁','남준혁','전도영','김권비','김두현','전호성','김민호','박효원','김지석'];
     const gyeomsonSisters = ['전효진','고다영','남소연','김유나','정여진','김민서','김이안','박지혜','이현화','심재경','유지연','김소은','임도해','심규리','이소희','심예림'];
@@ -24,7 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return section;
     }
 
+    function hideAllContainers() {
+        document.getElementById('attendanceContainerGyeomson').style.display = 'none';
+        document.getElementById('attendanceContainerOnyu').style.display = 'none';
+        document.getElementById('attendanceContainerSalang').style.display = 'none';
+    }
+
     function showAttendance(containerId, brothers, sisters) {
+        hideAllContainers(); // ✅ 다른 부서 숨기기
         const container = document.getElementById(containerId);
         container.innerHTML = '';
         container.appendChild(createSection('형제', brothers));
