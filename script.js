@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
           button.textContent = name;
           sistersSection.appendChild(button);
           button.addEventListener('click', () => {
-              alert(`${name}님의 출석이 기록되었습니다!`);
-          });
+            button.classList.toggle('checked');
+        });
       });
 
       // 형제와 자매 섹션을 컨테이너에 추가
