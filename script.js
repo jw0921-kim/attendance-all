@@ -35,22 +35,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // 각 부서 버튼 클릭 시 해당 부서의 출석부를 보여주기
+  // 각 부서 버튼 클릭 시 해당 부서의 출석부를 보이기
   document.getElementById('gyeomsonBtn').addEventListener('click', () => {
       const container = document.getElementById('attendanceContainerGyeomson');
-      container.style.display = container.style.display === 'none' ? 'block' : 'none'; // 토글로 보이기/숨기기
-      createAttendanceButtons(gyeomsonNames, 'attendanceContainerGyeomson');
+      const isVisible = container.style.display === 'block';
+      container.style.display = isVisible ? 'none' : 'block'; // 토글로 보이기/숨기기
+      if (!isVisible) {
+          createAttendanceButtons(gyeomsonNames, 'attendanceContainerGyeomson');
+      }
   });
 
   document.getElementById('onyuBtn').addEventListener('click', () => {
       const container = document.getElementById('attendanceContainerOnyu');
-      container.style.display = container.style.display === 'none' ? 'block' : 'none';
-      createAttendanceButtons(onyuNames, 'attendanceContainerOnyu');
+      const isVisible = container.style.display === 'block';
+      container.style.display = isVisible ? 'none' : 'block'; // 토글로 보이기/숨기기
+      if (!isVisible) {
+          createAttendanceButtons(onyuNames, 'attendanceContainerOnyu');
+      }
   });
 
   document.getElementById('salangBtn').addEventListener('click', () => {
       const container = document.getElementById('attendanceContainerSalang');
-      container.style.display = container.style.display === 'none' ? 'block' : 'none';
-      createAttendanceButtons(salangNames, 'attendanceContainerSalang');
+      const isVisible = container.style.display === 'block';
+      container.style.display = isVisible ? 'none' : 'block'; // 토글로 보이기/숨기기
+      if (!isVisible) {
+          createAttendanceButtons(salangNames, 'attendanceContainerSalang');
+      }
   });
 });
