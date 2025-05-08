@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('JavaScript가 정상적으로 실행되었습니다!'); // 디버깅 메시지 추가
+
   // 겸손부 형제 이름 배열
   const gyeomsonBrothers = [
       '이태섭', '김진우', '이동환', '문지훈', '박지웅', '김인수', '최재혁', '남준혁', '전도영', '김권비', '김두현', '전호성', '김민호', '박효원', '김지석'
